@@ -1,0 +1,8 @@
+{
+  "name": "exercitiul2",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "rimraf": "^5.0.0"
+  }
+}

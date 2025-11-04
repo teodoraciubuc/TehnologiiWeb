@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GET & POST Example</title>
+</head>
+<body>
+    <h2>Adaugă o persoană (POST)</h2>
+    <form>
+        <input id="inputName" type="text" placeholder="Nume">
+        <br /><br />
+        <input id="inputAge" type="number" placeholder="Vârstă">
+        <br /><br />
+        <input value="Adaugă" onclick="sendData()" type="button">
+        <br /><br />
+    </form>
+
+    <h2>Listă persoane (GET)</h2>
+    <div id="tableData"></div>
+
+    <h2>Caută persoană după ID (GET by ID)</h2>
+    <form>
+        <input id="inputId" type="number" placeholder="Introdu ID">
+        <br /><br />
+        <input value="Caută" onclick="getById()" type="button">
+        <br /><br />
+    </form>
+
+    <div id="result"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

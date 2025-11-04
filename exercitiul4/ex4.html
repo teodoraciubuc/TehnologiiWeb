@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Evenimente + Custom Events</title>
+    <script>
+        window.onload = () => {
+            const button = document.getElementById('myBtn');
+
+            const myEvtButton = new Event('myEvtButton');
+            const myEvtButtonHandler = () => {
+                console.log('The button was clicked.');
+            };
+
+            const clickButtonHandler = () => {
+                document.dispatchEvent(myEvtButton);
+            };
+
+            button.addEventListener("click", clickButtonHandler);
+            document.addEventListener("myEvtButton", myEvtButtonHandler);
+
+            // ex facut de mine
+            const img = document.getElementById('myImg');
+
+            const myEvtImage = new Event('myImgClicked');
+            const myEvtImageHandler = () => {
+                console.log('Imaginea a fost apăsată!');
+                alert('Imaginea a declanșat un eveniment custom 🎉');
+            };
+
+            const clickImageHandler = () => {
+                document.dispatchEvent(myEvtImage);
+            };
+
+            img.addEventListener("click", clickImageHandler);
+            document.addEventListener("myImgClicked", myEvtImageHandler);
+        };
+    </script>
+</head>
+
+<body>
+    <h3>Exemplul 1 – Butonul:</h3>
+    <button id="myBtn">Click me!</button>
+
+    <h3>Exemplul 2 – Imaginea:</h3>
+    <img id="myImg" src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_640.jpg" 
+     alt="pisică drăguță" 
+     style="cursor:pointer; border:2px solid gray; width:200px;">
+
+</body>
+
+</html>

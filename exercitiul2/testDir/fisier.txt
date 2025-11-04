@@ -1,0 +1,3 @@
+Acesta este un fișier creat automat.
+
+//lasat aici cu intentie ca sa vad ca s.a creat

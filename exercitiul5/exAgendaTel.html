@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda telefonică</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        table {
+            margin-top: 10px;
+            width: 300px;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            const form = document.getElementById('form');
+            const tabel = document.getElementById('agenda-body');
+
+            form.onsubmit = (e) => {
+                e.preventDefault();
+
+                const nume = document.getElementById('nume').value;
+                const telefon = document.getElementById('telefon').value;
+
+                const rand = document.createElement('tr');
+
+                const celulaNume = document.createElement('td');
+                celulaNume.textContent = nume;
+
+                const celulaTelefon = document.createElement('td');
+                celulaTelefon.textContent = telefon;
+
+                rand.appendChild(celulaNume);
+                rand.appendChild(celulaTelefon);
+                tabel.appendChild(rand);
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Agenda telefonică</h1>
+
+    <form id="form">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume"><br><br>
+
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" ><br><br>
+
+        <button type="submit">Adaugă contact</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nume</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody id="agenda-body"></tbody>
+    </table>
+</body>
+
+</html>
