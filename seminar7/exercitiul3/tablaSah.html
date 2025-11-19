@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabla Sah</title>
+
+    <style>
+
+       .wrapper{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+       }
+
+       .board-row{
+        display:flex;
+        align-items: center;
+       }
+
+
+       .number {
+        height: 40px;
+        width: 20px;
+        font-weight: bold;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color: rgb(0, 0, 0);
+       }
+
+       .boxes{
+        display: grid;
+        grid-template-columns: repeat(8,40px);
+        width: 320px;
+        height: 320px;
+        border: 2px solid black;
+       }
+
+       .top,.bottom{
+        display:grid;
+        grid-template-columns: repeat(8,40px);
+        width: 320px;
+        margin:5px 0;
+       }
+
+      .box-inner{
+        width: 40px;
+        text-align: center;
+        font-weight: bold;
+        height: 20px;
+        color:rgb(0, 0, 0);
+      }
+
+      .boxes .box:nth-child(16n+1),
+      .boxes .box:nth-child(16n+3),
+      .boxes .box:nth-child(16n+5),
+      .boxes .box:nth-child(16n+7),
+      .boxes .box:nth-child(16n+10),
+      .boxes .box:nth-child(16n+12),
+      .boxes .box:nth-child(16n+14),
+      .boxes .box:nth-child(16n+16){
+          background-color: white;
+      }
+
+      .boxes .box:nth-child(16n+2),
+      .boxes .box:nth-child(16n+4),
+      .boxes .box:nth-child(16n+6),
+      .boxes .box:nth-child(16n+8),
+      .boxes .box:nth-child(16n+9),
+      .boxes .box:nth-child(16n+11),
+      .boxes .box:nth-child(16n+13),
+      .boxes .box:nth-child(16n+15){
+          background-color: black;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <div class="top">
+        <div class="box-inner">A</div>
+        <div class="box-inner">B</div>
+        <div class="box-inner">C</div>
+        <div class="box-inner">D</div>
+        <div class="box-inner">E</div>
+        <div class="box-inner">F</div>
+        <div class="box-inner">G</div>
+        <div class="box-inner">H</div>
+      </div>
+
+      <div class="board-row">
+
+        <div class="numbers">
+          <div class="number">8</div>
+          <div class="number">7</div>
+          <div class="number">6</div>
+          <div class="number">5</div>
+          <div class="number">4</div>
+          <div class="number">3</div>
+          <div class="number">2</div>
+          <div class="number">1</div>
+        </div>
+
+        <div class="boxes">
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+        </div>
+
+        <div class="numbers">
+          <div class="number">8</div>
+          <div class="number">7</div>
+          <div class="number">6</div>
+          <div class="number">5</div>
+          <div class="number">4</div>
+          <div class="number">3</div>
+          <div class="number">2</div>
+          <div class="number">1</div>
+        </div>
+
+      </div>
+
+      <div class="bottom">
+        <div class="box-inner">A</div>
+        <div class="box-inner">B</div>
+        <div class="box-inner">C</div>
+        <div class="box-inner">D</div>
+        <div class="box-inner">E</div>
+        <div class="box-inner">F</div>
+        <div class="box-inner">G</div>
+        <div class="box-inner">H</div>
+      </div>
+
+    </div>
+  </body>
+</html>
